@@ -1,0 +1,94 @@
+.roll-name-area {
+  display: flex;
+  margin-top: 4px;
+}
+
+.tank-roll-area {
+  float: left;
+  margin-right: 8px;
+}
+
+.physical-range-roll-area {
+  float: left;
+  margin-right: 8px;
+}
+
+.roll-icon-image {
+  width: 24px;
+}
+
+.job-icons-area {
+  display: flex;
+}
+
+.job-icon-area {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+}
+
+.job-icon-area.melee {
+  background-color: brown;
+}
+
+.job-icon-area.physical-range {
+  background-color: brown;
+}
+
+.job-icon-area.magical-range {
+  background-color: brown;
+}
+
+.job-icon-area.tank {
+  background-color: royalblue;
+}
+
+.job-icon-area.healer {
+  background-color: forestgreen;
+}
+
+.job-icon-area.clicked {
+  border: var(--primary-color) solid 2px;
+}
+
+.job-icon-image {
+  width: 28px;
+}
+
+.job-icon-check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+.solo-skill-check-box {
+  margin-top: 8px;
+}
+
+.hide-column-execute-button-area {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hide-column-execute-button {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.hide-column-execute-button {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.hide-column-reset-button {
+  margin-right: 8px;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { GasStore } from './store/gas.store';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +8,25 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor(private primengConfig: PrimeNGConfig) {}
+  constructor(
+    private primengConfig: PrimeNGConfig,
+    private gasStore: GasStore
+  ) {}
 
   ngOnInit(): void {
     this.primengConfig.ripple = true;
     window.addEventListener('message', (response) => {
       if (response.data === 'endProgress') {
-        this.isProgress = false;
+        this.gasStore.isProgress = false;
       }
     });
   }
 
+  public get isProgress(): boolean {
+    return this.gasStore.isProgress;
+  }
+
   title = 'mitigation_sheet_side_bar';
-  isProgress = false;
 
   contents = [
     {
@@ -59,9 +66,4 @@ export class AppComponent implements OnInit {
       image: '../assets/bulk_row.png',
     },
   ];
-
-  public contentClick(method: string) {
-    this.isProgress = true;
-    window?.parent?.postMessage(method, '*');
-  }
 }

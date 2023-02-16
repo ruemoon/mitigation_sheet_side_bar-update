@@ -1,25 +1,37 @@
 <div class="container">
   <div class="contents">
-    <div pRipple class="content" *ngFor="let content of contents" (click)="contentClick(content.method)" style="background: left center url({{ content.image }}); background-size: 100%;">
-      <div class="title">{{ content.title }}</div>
-      <div class="subtitle">{{ content.subTitle }}</div>
-    </div>
+    <p-scrollPanel [style]="{ width: '100%', height: '100%' }">
+      <div>
+        <p-panel header="選択ジョブ列の一括表示">
+          <app-select-job></app-select-job>
+        </p-panel>
+        <p-divider></p-divider>
+      </div>
+    </p-scrollPanel>
   </div>
   <div class="footer">
     <div class="logo-area twitter">
-      <img class="logo" src="../assets/icon/twitter.png">
+      <img class="logo" src="../assets/icon/twitter.png" />
       <span>最新情報や告知等</span>
-      <a class ="footer-link" href="https://twitter.com/lastagous" target="_blank"></a>
+      <a
+        class="footer-link"
+        href="https://twitter.com/lastagous"
+        target="_blank"
+      ></a>
     </div>
     <div class="logo-area note">
-      <img class="logo" src="../assets/icon/note.png">
+      <img class="logo" src="../assets/icon/note.png" />
       <span>使い方や過去の軽減表</span>
-      <a class ="footer-link" href="https://note.com/lastagous" target="_blank"></a>
+      <a
+        class="footer-link"
+        href="https://note.com/lastagous"
+        target="_blank"
+      ></a>
     </div>
     <div class="logo-area discord">
-      <img class="logo" src="../assets/icon/discord.png">
+      <img class="logo" src="../assets/icon/discord.png" />
       <span>質問や不具合報告</span>
-      <a class ="footer-link" href="https://t.co/uTZRlBdyvC" target="_blank"></a>
+      <a class="footer-link" href="https://t.co/uTZRlBdyvC" target="_blank"></a>
     </div>
   </div>
 </div>
