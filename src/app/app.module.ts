@@ -17,9 +17,10 @@ import { AppComponent } from './app.component';
 import { JobStore } from './store/job.store';
 import { SelectJobComponent } from './component/select-job/select-job.component';
 import { GasStore } from './store/gas.store';
+import { HideAaComponent } from './component/hide-aa/hide-aa.component';
 
 @NgModule({
-  declarations: [AppComponent, SelectJobComponent],
+  declarations: [AppComponent, SelectJobComponent, HideAaComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
