@@ -31,3 +31,7 @@ p-blockUI {
 .p-panel .p-panel-content {
   padding: 8px 0px 12px 8px;
 }
+
+.p-selectbutton .p-button {
+  padding: 4px 16px 4px 16px;
+}

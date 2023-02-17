@@ -12,30 +12,38 @@ import { DividerModule } from 'primeng/divider';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { CheckboxModule } from 'primeng/checkbox';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 import { AppComponent } from './app.component';
 import { JobStore } from './store/job.store';
 import { SelectJobComponent } from './component/select-job/select-job.component';
 import { GasStore } from './store/gas.store';
 import { HideAaComponent } from './component/hide-aa/hide-aa.component';
+import { PrintMitigationComponent } from './component/print-mitigation/print-mitigation.component';
 
 @NgModule({
-  declarations: [AppComponent, SelectJobComponent, HideAaComponent],
+  declarations: [
+    AppComponent,
+    HideAaComponent,
+    PrintMitigationComponent,
+    SelectJobComponent,
+  ],
   imports: [
+    BlockUIModule,
     BrowserModule,
     BrowserAnimationsModule,
-    CommonModule,
-    BlockUIModule,
-    ProgressSpinnerModule,
-    ScrollPanelModule,
-    PanelModule,
-    DividerModule,
     ButtonModule,
-    RippleModule,
     CheckboxModule,
+    CommonModule,
+    DividerModule,
     FormsModule,
+    PanelModule,
+    ProgressSpinnerModule,
+    RippleModule,
+    SelectButtonModule,
+    ScrollPanelModule,
   ],
-  providers: [JobStore, GasStore],
+  providers: [GasStore, JobStore],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

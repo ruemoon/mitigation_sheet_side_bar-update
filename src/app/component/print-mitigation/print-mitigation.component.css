@@ -1,0 +1,11 @@
+.print-mitigation-button-area {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.print-mitigation-button {
+  flex-grow: 1;
+  margin-right: 8px;
+}
