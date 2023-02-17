@@ -1,43 +1,51 @@
 <div class="container">
-  <div class="contents">
-    <p-scrollPanel [style]="{ width: '100%', height: '100%' }">
-      <p-panel header="選択ジョブ列の一括表示">
-        <app-select-job></app-select-job>
-      </p-panel>
-      <p-divider></p-divider>
-      <p-panel header="不要行の一括非表示">
-        <app-hide-aa></app-hide-aa>
-      </p-panel>
-      <p-divider></p-divider>
-      <p-panel header="軽減一覧のテキスト表示">
-        <app-print-mitigation></app-print-mitigation>
-      </p-panel>
-      <p-divider></p-divider>
-      <p-panel header="タイムラインファイルの DL">
-        <app-download-spespe></app-download-spespe>
-      </p-panel>
-    </p-scrollPanel>
+  <div class="content">
+    <div class="contents">
+      <p-scrollPanel [style]="{ width: '100%', height: '100%' }">
+        <p-panel header="選択ジョブ列の一括表示">
+          <app-select-job></app-select-job>
+        </p-panel>
+        <p-divider></p-divider>
+        <p-panel header="不要行の一括非表示">
+          <app-hide-aa></app-hide-aa>
+        </p-panel>
+        <p-divider></p-divider>
+        <p-panel header="軽減一覧のテキスト表示">
+          <app-print-mitigation></app-print-mitigation>
+        </p-panel>
+        <p-divider></p-divider>
+        <p-panel header="タイムラインファイルの DL">
+          <app-download-spespe></app-download-spespe>
+        </p-panel>
+      </p-scrollPanel>
+    </div>
   </div>
   <div class="footer">
-    <div class="logo-area twitter">
-      <img class="logo" src="../assets/icon/twitter.png" />
-      <a
-        class="footer-link"
-        href="https://twitter.com/lastagous"
-        target="_blank"
-      ></a>
-    </div>
-    <div class="logo-area note">
-      <img class="logo" src="../assets/icon/note.png" />
-      <a
-        class="footer-link"
-        href="https://note.com/lastagous"
-        target="_blank"
-      ></a>
-    </div>
-    <div class="logo-area discord">
-      <img class="logo" src="../assets/icon/discord.png" />
-      <a class="footer-link" href="https://t.co/uTZRlBdyvC" target="_blank"></a>
+    <div class="footer-area">
+      <div class="logo-area twitter">
+        <img class="logo" src="../assets/icon/twitter.png" />
+        <a
+          class="footer-link"
+          href="https://twitter.com/lastagous"
+          target="_blank"
+        ></a>
+      </div>
+      <div class="logo-area note">
+        <img class="logo" src="../assets/icon/note.png" />
+        <a
+          class="footer-link"
+          href="https://note.com/lastagous"
+          target="_blank"
+        ></a>
+      </div>
+      <div class="logo-area discord">
+        <img class="logo" src="../assets/icon/discord.png" />
+        <a
+          class="footer-link"
+          href="https://t.co/uTZRlBdyvC"
+          target="_blank"
+        ></a>
+      </div>
     </div>
   </div>
 </div>
