@@ -20,10 +20,12 @@ import { SelectJobComponent } from './component/select-job/select-job.component'
 import { GasStore } from './store/gas.store';
 import { HideAaComponent } from './component/hide-aa/hide-aa.component';
 import { PrintMitigationComponent } from './component/print-mitigation/print-mitigation.component';
+import { DownloadSpespeComponent } from './component/download-spespe/download-spespe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DownloadSpespeComponent,
     HideAaComponent,
     PrintMitigationComponent,
     SelectJobComponent,
