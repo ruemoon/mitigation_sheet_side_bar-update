@@ -21,6 +21,7 @@ import { GasStore } from './store/gas.store';
 import { HideAaComponent } from './component/hide-aa/hide-aa.component';
 import { PrintMitigationComponent } from './component/print-mitigation/print-mitigation.component';
 import { DownloadSpespeComponent } from './component/download-spespe/download-spespe.component';
+import { GenerateSheetComponent } from './component/generate-sheet/generate-sheet.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { DownloadSpespeComponent } from './component/download-spespe/download-sp
     HideAaComponent,
     PrintMitigationComponent,
     SelectJobComponent,
+    GenerateSheetComponent,
   ],
   imports: [
     BlockUIModule,

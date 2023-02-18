@@ -1,0 +1,21 @@
+<div class="setting-api-key-button-area">
+  <button
+    pButton
+    pRipple
+    type="button"
+    label="Logs API Key の設定"
+    class="p-button-rounded setting-api-key-button"
+    (click)="settingApiKey()"
+  ></button>
+</div>
+<div class="generate-mitigation-sheet-button-area">
+  <button
+    pButton
+    pRipple
+    type="button"
+    label="軽減表の自動生成"
+    class="p-button-rounded generate-mitigation-sheet-button"
+    [disabled]="!hasApiKey"
+    (click)="generateMitigationSheet()"
+  ></button>
+</div>

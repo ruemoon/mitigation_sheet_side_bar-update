@@ -1,0 +1,23 @@
+.setting-api-key-button-area {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.setting-api-key-button {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.generate-mitigation-sheet-button-area {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.generate-mitigation-sheet-button {
+  flex-grow: 1;
+  margin-right: 8px;
+}

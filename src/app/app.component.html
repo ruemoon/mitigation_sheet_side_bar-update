@@ -17,6 +17,9 @@
         <p-panel header="タイムラインファイルの DL">
           <app-download-spespe></app-download-spespe>
         </p-panel>
+        <p-panel *ngIf="existSettingSheet" header="軽減表の自動生成">
+          <app-generate-sheet></app-generate-sheet>
+        </p-panel>
       </p-scrollPanel>
     </div>
   </div>
