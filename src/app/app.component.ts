@@ -16,9 +16,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.primengConfig.ripple = true;
     window.addEventListener('message', (response) => {
-      if (response.data === 'endProgress') {
+      if (response.data.method === 'endProgress') {
         this.gasStore.isProgress = false;
+      } else if (response.data.type == 'webpackOk') {
+        this.gasStore.executeGasMethod('initial', {});
       }
+      console.log(response);
     });
   }
 

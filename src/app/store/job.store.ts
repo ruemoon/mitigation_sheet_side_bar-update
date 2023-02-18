@@ -30,13 +30,13 @@ export class JobStore {
     },
     {
       roll: 'healer',
-      name_en: 'scholar',
-      name_jp: '学者',
+      name_en: 'astrologian',
+      name_jp: '占星術師',
     },
     {
       roll: 'healer',
-      name_en: 'astrologian',
-      name_jp: '占星術師',
+      name_en: 'scholar',
+      name_jp: '学者',
     },
     {
       roll: 'healer',
@@ -151,7 +151,6 @@ export class JobStore {
     '生命回生法',
     '鼓舞激励の策',
     '深謀遠慮の策',
-    'エーテルフロー',
     'ゾーエ',
     'ピュシスII(追加効果)',
     'イックソコレ',
