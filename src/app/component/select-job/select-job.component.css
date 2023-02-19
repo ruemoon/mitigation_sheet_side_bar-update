@@ -17,8 +17,8 @@
 }
 
 .job-icon-area {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
@@ -52,7 +52,7 @@
 }
 
 .job-icon-image {
-  width: 28px;
+  width: 32px;
 }
 
 .job-icon-check {
