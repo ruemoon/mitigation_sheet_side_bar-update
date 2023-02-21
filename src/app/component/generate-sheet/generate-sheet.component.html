@@ -4,6 +4,7 @@
     pRipple
     type="button"
     label="Logs API Key の設定"
+    icon="pi pi-wrench"
     class="p-button-rounded setting-api-key-button"
     (click)="settingApiKey()"
   ></button>
@@ -15,6 +16,7 @@
     type="button"
     label="軽減表の自動生成"
     class="p-button-rounded generate-mitigation-sheet-button"
+    icon="pi pi-file-edit"
     [disabled]="!hasApiKey"
     (click)="generateMitigationSheet()"
   ></button>

@@ -1,6 +1,7 @@
 .roll-name-area {
   display: flex;
   margin-top: 4px;
+  font-weight: bold;
 }
 
 .physical-range-roll-area {
