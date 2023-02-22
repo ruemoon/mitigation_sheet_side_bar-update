@@ -18,15 +18,7 @@ p-blockUI {
 }
 
 .p-panel .p-panel-header {
-  padding: 4px 8px;
-  border: none;
-  border-top-right-radius: unset;
-  border-top-left-radius: unset;
-  background-image: linear-gradient(
-    90deg,
-    rgba(45, 44, 44, 1),
-    rgba(75, 75, 75, 1)
-  );
+  padding: 12px 8px;
 }
 
 .p-panel .p-panel-content {
@@ -35,4 +27,13 @@ p-blockUI {
 
 .p-selectbutton .p-button {
   padding: 4px 12px 4px 12px;
+}
+
+.p-button-label {
+  font-weight: normal;
+  color: BLACK;
+}
+
+.p-button-icon-left {
+  color: BLACK;
 }
