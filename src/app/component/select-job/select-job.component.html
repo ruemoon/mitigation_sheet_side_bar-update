@@ -1,137 +1,47 @@
 <div class="tank-roll-area">
-  <div class="roll-name-area">
-    <img
-      class="roll-icon-image"
-      src="https://xivapi.com/cj/misc/clear_tank.png"
-    />
-    <span>Tank</span>
-  </div>
-  <div class="job-icons-area">
-    <div
-      *ngFor="let job of jobStore.getTankList()"
-      pRipple
-      class="job-icon-area {{ job.roll }}"
-      [class.clicked]="isJobCheck(job.name_jp)"
-      (click)="jobIconClick(job.name_jp)"
-    >
-      <img
-        class="job-icon-image"
-        src="https://xivapi.com/cj/1/{{ job.name_en }}.png"
-      />
-      <div
-        *ngIf="isJobCheck(job.name_jp)"
-        class="pi pi-check job-icon-check"
-      ></div>
-    </div>
-  </div>
+  <app-job-icon
+    [jobList]="jobStore.getTankList()"
+    [checkJobList]="checkJobList"
+    roll="Tank"
+    rollIconUrl="https://xivapi.com/cj/misc/clear_tank.png"
+    (jobIconClick)="jobIconClick($event)"
+  ></app-job-icon>
 </div>
 <div class="healer-roll-area">
-  <div class="roll-name-area">
-    <img
-      class="roll-icon-image"
-      src="https://xivapi.com/cj/misc/clear_healer.png"
-    />
-    <span>Healer</span>
-  </div>
-  <div class="job-icons-area">
-    <div
-      *ngFor="let job of jobStore.getHealerList()"
-      pRipple
-      class="job-icon-area {{ job.roll }}"
-      [class.clicked]="isJobCheck(job.name_jp)"
-      (click)="jobIconClick(job.name_jp)"
-    >
-      <img
-        class="job-icon-image"
-        src="https://xivapi.com/cj/1/{{ job.name_en }}.png"
-      />
-      <div
-        *ngIf="isJobCheck(job.name_jp)"
-        class="pi pi-check job-icon-check"
-      ></div>
-    </div>
-  </div>
+  <app-job-icon
+    [jobList]="jobStore.getHealerList()"
+    [checkJobList]="checkJobList"
+    roll="Healer"
+    rollIconUrl="https://xivapi.com/cj/misc/clear_healer.png"
+    (jobIconClick)="jobIconClick($event)"
+  ></app-job-icon>
 </div>
 <div class="melee-roll-area">
-  <div class="roll-name-area">
-    <img
-      class="roll-icon-image"
-      src="https://xivapi.com/cj/misc/clear_dps.png"
-    />
-    <span>Melee DPS</span>
-  </div>
-  <div class="job-icons-area">
-    <div
-      *ngFor="let job of jobStore.getMeleeList()"
-      pRipple
-      class="job-icon-area {{ job.roll }}"
-      [class.clicked]="isJobCheck(job.name_jp)"
-      (click)="jobIconClick(job.name_jp)"
-    >
-      <img
-        class="job-icon-image"
-        src="https://xivapi.com/cj/1/{{ job.name_en }}.png"
-      />
-      <div
-        *ngIf="isJobCheck(job.name_jp)"
-        class="pi pi-check job-icon-check"
-      ></div>
-    </div>
-  </div>
+  <app-job-icon
+    [jobList]="jobStore.getMeleeList()"
+    [checkJobList]="checkJobList"
+    roll="Melee DPS"
+    rollIconUrl="https://xivapi.com/cj/misc/clear_dps.png"
+    (jobIconClick)="jobIconClick($event)"
+  ></app-job-icon>
 </div>
 <div class="physical-range-roll-area">
-  <div class="roll-name-area">
-    <img
-      class="roll-icon-image"
-      src="https://xivapi.com/cj/misc/clear_ranged.png"
-    />
-    <span>Ranged</span>
-  </div>
-  <div class="job-icons-area">
-    <div
-      *ngFor="let job of jobStore.getPhysicalRangeList()"
-      pRipple
-      class="job-icon-area {{ job.roll }}"
-      [class.clicked]="isJobCheck(job.name_jp)"
-      (click)="jobIconClick(job.name_jp)"
-    >
-      <img
-        class="job-icon-image"
-        src="https://xivapi.com/cj/1/{{ job.name_en }}.png"
-      />
-      <div
-        *ngIf="isJobCheck(job.name_jp)"
-        class="pi pi-check job-icon-check"
-      ></div>
-    </div>
-  </div>
+  <app-job-icon
+    [jobList]="jobStore.getPhysicalRangeList()"
+    [checkJobList]="checkJobList"
+    roll="Ranged"
+    rollIconUrl="https://xivapi.com/cj/misc/clear_ranged.png"
+    (jobIconClick)="jobIconClick($event)"
+  ></app-job-icon>
 </div>
 <div class="magical-range-roll-area">
-  <div class="roll-name-area">
-    <img
-      class="roll-icon-image"
-      src="https://xivapi.com/cj/misc/clear_dps_magic.png"
-    />
-    <span>Caster</span>
-  </div>
-  <div class="job-icons-area">
-    <div
-      *ngFor="let job of jobStore.getMagicalRangeList()"
-      pRipple
-      class="job-icon-area {{ job.roll }}"
-      [class.clicked]="isJobCheck(job.name_jp)"
-      (click)="jobIconClick(job.name_jp)"
-    >
-      <img
-        class="job-icon-image"
-        src="https://xivapi.com/cj/1/{{ job.name_en }}.png"
-      />
-      <div
-        *ngIf="isJobCheck(job.name_jp)"
-        class="pi pi-check job-icon-check"
-      ></div>
-    </div>
-  </div>
+  <app-job-icon
+    [jobList]="jobStore.getMagicalRangeList()"
+    [checkJobList]="checkJobList"
+    roll="Caster"
+    rollIconUrl="https://xivapi.com/cj/misc/clear_dps_magic.png"
+    (jobIconClick)="jobIconClick($event)"
+  ></app-job-icon>
 </div>
 <div class="solo-skill-check-box">
   <p-checkbox

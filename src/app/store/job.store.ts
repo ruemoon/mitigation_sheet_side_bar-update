@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { JobModel } from '../model/job';
 
 @Injectable()
 export class JobStore {
-  private _jobList = [
+  private _jobList: JobModel[] = [
     {
       roll: 'tank',
       name_en: 'paladin',
@@ -173,7 +174,7 @@ export class JobStore {
     this._checkJobList = value;
   }
 
-  public get jobList(): { roll: string; name_en: string; name_jp: string }[] {
+  public get jobList(): JobModel[] {
     return this._jobList;
   }
 
@@ -181,23 +182,23 @@ export class JobStore {
     return this._soloSkillList;
   }
 
-  public getTankList() {
+  public getTankList(): JobModel[] {
     return this._jobList.filter((val) => val.roll == 'tank');
   }
 
-  public getHealerList() {
+  public getHealerList(): JobModel[] {
     return this._jobList.filter((val) => val.roll == 'healer');
   }
 
-  public getMeleeList() {
+  public getMeleeList(): JobModel[] {
     return this._jobList.filter((val) => val.roll == 'melee');
   }
 
-  public getPhysicalRangeList() {
+  public getPhysicalRangeList(): JobModel[] {
     return this._jobList.filter((val) => val.roll == 'physical-range');
   }
 
-  public getMagicalRangeList() {
+  public getMagicalRangeList(): JobModel[] {
     return this._jobList.filter((val) => val.roll == 'magical-range');
   }
 }

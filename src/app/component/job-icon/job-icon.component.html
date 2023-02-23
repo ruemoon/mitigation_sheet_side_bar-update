@@ -1,0 +1,22 @@
+<div class="roll-name-area">
+  <img class="roll-icon-image" src="{{ rollIconUrl }}" />
+  <span>{{ roll }}</span>
+</div>
+<div class="job-icons-area">
+  <div
+    *ngFor="let job of jobList"
+    pRipple
+    class="job-icon-area {{ job.roll }}"
+    [class.clicked]="isJobIconCheck(job.name_jp)"
+    (click)="onJobIconClick(job.name_jp)"
+  >
+    <img
+      class="job-icon-image"
+      src="https://xivapi.com/cj/1/{{ job.name_en }}.png"
+    />
+    <div
+      *ngIf="isJobIconCheck(job.name_jp)"
+      class="pi pi-check job-icon-check"
+    ></div>
+  </div>
+</div>

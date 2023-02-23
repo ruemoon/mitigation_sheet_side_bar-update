@@ -22,6 +22,7 @@ import { HideAaComponent } from './component/hide-aa/hide-aa.component';
 import { PrintMitigationComponent } from './component/print-mitigation/print-mitigation.component';
 import { DownloadSpespeComponent } from './component/download-spespe/download-spespe.component';
 import { GenerateSheetComponent } from './component/generate-sheet/generate-sheet.component';
+import { JobIconComponent } from './component/job-icon/job-icon.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { GenerateSheetComponent } from './component/generate-sheet/generate-shee
     PrintMitigationComponent,
     SelectJobComponent,
     GenerateSheetComponent,
+    JobIconComponent,
   ],
   imports: [
     BlockUIModule,
