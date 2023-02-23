@@ -40,10 +40,6 @@ export class SelectJobComponent {
     }
   }
 
-  public isJobCheck(jobname: string): boolean {
-    return this.checkJobList.includes(jobname);
-  }
-
   public clickHideColumnJobList() {
     const hideJobList: string[] = [];
     if (this._jobStore.checkJobList.length) {
