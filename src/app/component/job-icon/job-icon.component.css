@@ -49,17 +49,16 @@
 }
 
 .job-icon-area.clicked {
-  border: var(--primary-color) solid 2px;
+  border: #4cc4e4 solid 2px;
 }
 
 .job-icon-image {
   width: 32px;
 }
 
-.job-icon-check {
+.job-icon-check-image {
   position: absolute;
   top: 0;
   right: 0;
-  color: var(--primary-color);
-  font-size: 12px;
+  width: 16px;
 }
