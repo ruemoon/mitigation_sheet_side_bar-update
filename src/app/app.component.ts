@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { GasStore } from './store/gas.store';
+import { JobStore } from './store/job.store';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { GasStore } from './store/gas.store';
 export class AppComponent implements OnInit {
   constructor(
     private primengConfig: PrimeNGConfig,
-    private gasStore: GasStore
+    private gasStore: GasStore,
+    private jobStore: JobStore
   ) {}
 
   ngOnInit(): void {
@@ -21,6 +23,7 @@ export class AppComponent implements OnInit {
         this.gasStore.hasApiKey = response.data.option.hasApiKey;
         this.gasStore.existSettingSheet =
           response.data.option.existSettingSheet;
+        this.jobStore.checkJobList = response.data.option.viewJobList;
       } else if (response.data.type == 'webpackOk') {
         this.gasStore.executeGasMethod('initial', {});
       }
