@@ -13,6 +13,8 @@ import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { CheckboxModule } from 'primeng/checkbox';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 import { AppComponent } from './app.component';
 import { JobStore } from './store/job.store';
@@ -48,8 +50,9 @@ import { JobIconComponent } from './component/job-icon/job-icon.component';
     RippleModule,
     SelectButtonModule,
     ScrollPanelModule,
+    ToastModule,
   ],
-  providers: [GasStore, JobStore],
+  providers: [GasStore, JobStore, MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

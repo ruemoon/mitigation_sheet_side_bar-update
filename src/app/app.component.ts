@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api';
+import { MessageService, PrimeNGConfig } from 'primeng/api';
 import { GasStore } from './store/gas.store';
 import { JobStore } from './store/job.store';
 
@@ -11,6 +11,7 @@ import { JobStore } from './store/job.store';
 export class AppComponent implements OnInit {
   constructor(
     private primengConfig: PrimeNGConfig,
+    private messageService: MessageService,
     private gasStore: GasStore,
     private jobStore: JobStore
   ) {}
@@ -24,6 +25,14 @@ export class AppComponent implements OnInit {
         this.gasStore.existSettingSheet =
           response.data.option.existSettingSheet;
         this.jobStore.checkJobList = response.data.option.viewJobList;
+        if (response.data.option.error) {
+          this.messageService.add({
+            severity: 'error',
+            summary: 'Error',
+            detail: response.data.option.error.message,
+            sticky: true,
+          });
+        }
       } else if (response.data.type == 'webpackOk') {
         this.gasStore.executeGasMethod('initial', {});
       }

@@ -37,3 +37,8 @@ p-blockUI {
 .p-button-icon-left {
   color: BLACK;
 }
+
+.p-toast-top-right {
+  width: auto !important;
+  left: 20px;
+}
