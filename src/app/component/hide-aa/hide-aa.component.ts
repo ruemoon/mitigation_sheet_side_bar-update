@@ -9,6 +9,6 @@ import { GasStore } from 'src/app/store/gas.store';
 export class HideAaComponent {
   constructor(private gasStore: GasStore) {}
   public clickHideAAButton() {
-    this.gasStore.executeGasMethod('hiddenAARows', {});
+    this.gasStore.executeGasMethod('hideAutoAttackRow', {});
   }
 }

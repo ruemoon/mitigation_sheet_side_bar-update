@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.primengConfig.ripple = true;
     window.addEventListener('message', (response) => {
+      console.log(response);
       if (response.data.method === 'endProgress') {
         this.gasStore.isProgress = false;
         this.gasStore.hasApiKey = response.data.option.hasApiKey;
@@ -34,9 +35,8 @@ export class AppComponent implements OnInit {
           });
         }
       } else if (response.data.type == 'webpackOk') {
-        this.gasStore.executeGasMethod('initial', {});
+        this.gasStore.executeGasMethod('getInitialParam', {});
       }
-      console.log(response);
     });
   }
 

@@ -34,6 +34,6 @@ export class GasStore {
 
   public executeGasMethod(method: string, option: Object) {
     this.isProgress = true;
-    window?.parent?.postMessage({ method: method, option: option }, '*');
+    window?.parent?.postMessage({ method: method, param: option }, '*');
   }
 }

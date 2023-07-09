@@ -14,10 +14,10 @@ export class GenerateSheetComponent {
   }
 
   public settingApiKey() {
-    this.gasStore.executeGasMethod('settingApiKey', {});
+    this.gasStore.executeGasMethod('setLogsApiKey', {});
   }
 
   public generateMitigationSheet() {
-    this.gasStore.executeGasMethod('generateMitigationSheet', {});
+    this.gasStore.executeGasMethod('createMitigationSheet', {});
   }
 }

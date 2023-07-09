@@ -16,7 +16,7 @@ export class PrintMitigationComponent {
   ];
   constructor(private gasStore: GasStore) {}
   public clickPrintMitigation() {
-    this.gasStore.executeGasMethod('buffTimeLinePrintText', {
+    this.gasStore.executeGasMethod('viewMitigationText', {
       selectChat: this.selectChat,
     });
   }

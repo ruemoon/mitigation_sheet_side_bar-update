@@ -49,7 +49,7 @@ export class SelectJobComponent {
         }
       });
     }
-    this.gasStore.executeGasMethod('hiddenColumnSelectJobs', {
+    this.gasStore.executeGasMethod('hideSelectJobColumn', {
       jobList: hideJobList,
       skillList: this.isContainsSoloSkill ? [] : this._jobStore.soloSkillList,
       isNotChecked: this._jobStore.checkJobList.length === 0,

@@ -9,9 +9,6 @@ import { GasStore } from 'src/app/store/gas.store';
 export class DownloadSpespeComponent {
   constructor(private gasStore: GasStore) {}
   public downloadXmlButton() {
-    this.gasStore.executeGasMethod(
-      'viewSpecialSpellTimerXmlDownloadDialog',
-      {}
-    );
+    this.gasStore.executeGasMethod('viewDownloadXml', {});
   }
 }
