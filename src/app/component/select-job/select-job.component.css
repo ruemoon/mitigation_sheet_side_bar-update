@@ -1,19 +1,102 @@
-.solo-skill-check-box {
-  margin-top: 8px;
+.select-job {
+  display: flex;
+  flex-direction: column;
 }
 
-.hide-column-execute-button-area {
-  margin-top: 8px;
+.select-job-roll {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-job-roll-name {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  padding-bottom: 4px;
+  font-weight: bold;
 }
 
-.hide-column-execute-button {
-  flex-grow: 1;
-  margin-right: 8px;
+.select-job-roll-name-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
 }
 
-.hide-column-reset-button {
+.select-job-roll-job {
+  display: flex;
+  padding-bottom: 4px;
+}
+
+.select-job-roll-job-content {
+  width: 36px;
+  height: 36px;
+}
+
+.select-job-roll-job-content-base-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.select-job-roll-job-content-icon {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.select-job-roll-job-content-check-icon {
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  width: 18px;
+  height: 18px;
+}
+
+.select-job-assign {
+  padding-bottom: 4px;
+}
+
+.select-job-assign-title {
+  font-weight: bold;
+}
+
+.select-job-assign-checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+p-checkbox {
+  padding-bottom: 4px;
+}
+
+.select-job-type {
+  padding-bottom: 4px;
+}
+
+.select-job-type-title {
+  font-weight: bold;
+}
+
+.select-job-type-checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-job-execution {
+  display: flex;
+  padding-top: 12px;
+}
+
+.select-job-execution-button {
+  flex: 1;
+}
+
+.select-job-execution-reset-button {
+  margin-left: 8px;
   margin-right: 8px;
 }

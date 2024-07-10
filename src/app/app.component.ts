@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MessageService, PrimeNGConfig } from 'primeng/api';
 import { GasStore } from './store/gas.store';
 import { JobStore } from './store/job.store';
+import { Job_JP } from './enum/job';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,16 @@ export class AppComponent implements OnInit {
         this.gasStore.hasApiKey = response.data.option.hasApiKey;
         this.gasStore.existSettingSheet =
           response.data.option.existSettingSheet;
-        this.jobStore.checkJobList = response.data.option.viewJobList;
+        response.data.option.viewJobList.forEach(
+          (viewJob: { name: Job_JP; check: boolean }) => {
+            const job = this.jobStore.jobList.find(
+              (job) => job.name.jp === viewJob.name
+            );
+            if (job) {
+              job.check = viewJob.check;
+            }
+          }
+        );
         if (response.data.option.error) {
           this.messageService.add({
             severity: 'error',

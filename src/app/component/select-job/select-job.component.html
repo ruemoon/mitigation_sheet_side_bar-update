@@ -1,72 +1,123 @@
-<div class="tank-roll-area">
-  <app-job-icon
-    [jobList]="jobStore.getTankList()"
-    [checkJobList]="checkJobList"
-    roll="Tank"
-    rollIconUrl="https://xivapi.com/cj/misc/clear_tank.png"
-    (jobIconClick)="jobIconClick($event)"
-  ></app-job-icon>
+<div class="select-job">
+  <div class="select-job-roll">
+    <ng-container
+      *ngTemplateOutlet="JobIcon; context: { jobList: tankList }"
+    ></ng-container>
+  </div>
+  <div class="select-job-roll">
+    <ng-container
+      *ngTemplateOutlet="JobIcon; context: { jobList: healerList }"
+    ></ng-container>
+  </div>
+  <div class="select-job-roll">
+    <ng-container
+      *ngTemplateOutlet="JobIcon; context: { jobList: meleeList }"
+    ></ng-container>
+  </div>
+  <div class="select-job-roll">
+    <ng-container
+      *ngTemplateOutlet="JobIcon; context: { jobList: physicalRangeList }"
+    ></ng-container>
+  </div>
+  <div class="select-job-roll">
+    <ng-container
+      *ngTemplateOutlet="JobIcon; context: { jobList: magicalRangeList }"
+    ></ng-container>
+  </div>
+  <div class="select-job-assign">
+    <div class="select-job-assign-title">表示するスキルを対象で選ぶ</div>
+    <div class="select-job-assign-checkbox">
+      <p-checkbox
+        [binary]="true"
+        [(ngModel)]="isAssignSelf"
+        label="自身を対象にするスキル"
+      ></p-checkbox>
+      <p-checkbox
+        [binary]="true"
+        [(ngModel)]="isAssignEnemy"
+        label="敵を対象にするスキル"
+      ></p-checkbox>
+      <p-checkbox
+        [binary]="true"
+        [(ngModel)]="isAssignRangeParty"
+        label="味方全体を対象にするスキル"
+      ></p-checkbox>
+      <p-checkbox
+        [binary]="true"
+        [(ngModel)]="isAssignSingleParty"
+        label="味方単体を対象にするスキル"
+      ></p-checkbox>
+    </div>
+  </div>
+  <div class="select-job-type">
+    <div class="select-job-assign-title">表示するスキルを効果で選ぶ</div>
+    <div class="select-job-type-checkbox">
+      <p-checkbox
+        [binary]="true"
+        [(ngModel)]="isTypeMitigation"
+        label="ダメージ軽減をするスキル"
+      ></p-checkbox>
+      <p-checkbox
+        [binary]="true"
+        [(ngModel)]="isTypeBarrier"
+        label="バリアを適用するスキル"
+      ></p-checkbox>
+      <p-checkbox
+        [binary]="true"
+        [(ngModel)]="isTypeHeal"
+        label="ヒールをするスキル"
+      ></p-checkbox>
+    </div>
+  </div>
+  <div class="select-job-execution">
+    <button
+      pButton
+      pRipple
+      type="button"
+      label="列の表示/非表示"
+      icon="pi pi-sliders-h"
+      class="p-button-rounded select-job-execution-button"
+      (click)="clickHideColumnJobList()"
+    ></button>
+    <button
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-trash"
+      class="p-button-rounded p-button-secondary select-job-execution-reset-button"
+      (click)="clickResetJobList()"
+    ></button>
+  </div>
 </div>
-<div class="healer-roll-area">
-  <app-job-icon
-    [jobList]="jobStore.getHealerList()"
-    [checkJobList]="checkJobList"
-    roll="Healer"
-    rollIconUrl="https://xivapi.com/cj/misc/clear_healer.png"
-    (jobIconClick)="jobIconClick($event)"
-  ></app-job-icon>
-</div>
-<div class="melee-roll-area">
-  <app-job-icon
-    [jobList]="jobStore.getMeleeList()"
-    [checkJobList]="checkJobList"
-    roll="Melee DPS"
-    rollIconUrl="https://xivapi.com/cj/misc/clear_dps.png"
-    (jobIconClick)="jobIconClick($event)"
-  ></app-job-icon>
-</div>
-<div class="physical-range-roll-area">
-  <app-job-icon
-    [jobList]="jobStore.getPhysicalRangeList()"
-    [checkJobList]="checkJobList"
-    roll="Ranged"
-    rollIconUrl="https://xivapi.com/cj/misc/clear_ranged.png"
-    (jobIconClick)="jobIconClick($event)"
-  ></app-job-icon>
-</div>
-<div class="magical-range-roll-area">
-  <app-job-icon
-    [jobList]="jobStore.getMagicalRangeList()"
-    [checkJobList]="checkJobList"
-    roll="Caster"
-    rollIconUrl="https://xivapi.com/cj/misc/clear_dps_magic.png"
-    (jobIconClick)="jobIconClick($event)"
-  ></app-job-icon>
-</div>
-<div class="solo-skill-check-box">
-  <p-checkbox
-    [binary]="true"
-    [(ngModel)]="isContainsSoloSkill"
-    label="個人スキルを表示する"
-  >
-  </p-checkbox>
-</div>
-<div class="hide-column-execute-button-area">
-  <button
-    pButton
-    pRipple
-    type="button"
-    label="列の表示/非表示"
-    icon="pi pi-sliders-h"
-    class="p-button-rounded hide-column-execute-button"
-    (click)="clickHideColumnJobList()"
-  ></button>
-  <button
-    pButton
-    pRipple
-    type="button"
-    icon="pi pi-trash"
-    class="p-button-rounded p-button-secondary hide-column-reset-button"
-    (click)="clickResetJobList()"
-  ></button>
-</div>
+<ng-template #JobIcon let-jobList="jobList">
+  <div class="select-job-roll-name">
+    <img
+      class="select-job-roll-name-icon"
+      src="{{ jobList[0]?.rollIcon.icon }}"
+    />
+    <span>{{ jobList[0]?.roll }}</span>
+  </div>
+  <div class="select-job-roll-job">
+    <div
+      *ngFor="let job of jobList"
+      pRipple
+      class="select-job-roll-job-content"
+      [class.clicked]="job.check"
+      (click)="onJobIconClick(job.name.jp)"
+    >
+      <img
+        class="select-job-roll-job-content-base-icon"
+        src="{{ job.rollIcon.base }}"
+      />
+      <img
+        class="select-job-roll-job-content-icon"
+        src="{{ job.jobIcon.legacy }}"
+      />
+      <img
+        *ngIf="job.check"
+        class="select-job-roll-job-content-check-icon"
+        src="https://xivapi.com/i/060000/060081.png"
+      />
+    </div>
+  </div>
+</ng-template>
